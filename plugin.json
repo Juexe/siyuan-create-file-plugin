@@ -1,8 +1,8 @@
 {
-  "name": "plugin-sample-vite",
-  "author": "frostime",
-  "url": "https://github.com/frostime/plugin-sample-vite",
-  "version": "0.3.5",
+  "name": "create-file",
+  "author": "Juexe",
+  "url": "https://github.com/Juexe/siyuan-create-file-plugin",
+  "version": "0.1.0",
   "minAppVersion": "3.0.12",
   "backends": [
     "windows",
@@ -13,29 +13,28 @@
   ],
   "frontends": [
     "desktop",
-    "mobile",
-    "browser-desktop",
-    "browser-mobile",
     "desktop-window"
   ],
   "displayName": {
-    "en_US": "Plugin sample with vite",
-    "zh_CN": "插件样例 vite 版"
+    "default": "Create file(drawio, excalidraw)",
+    "zh_CN": "创建文件(drawio, excalidraw)"
   },
   "description": {
-    "en_US": "SiYuan plugin sample with vite",
-    "zh_CN": "使用 vite 开发的思源插件样例"
+    "default": "Used to create files within the editor. For example, creating a '. drawio' or '. excalidraw' file that can be easily edited with an external editor",
+    "zh_CN": "用于在编辑器内创建文件。例如创建`.drawio`或`.excalidraw`文件，可用外部编辑器方便编辑。"
   },
   "readme": {
-    "en_US": "README.md",
+    "default": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
   "funding": {
     "custom": [
-      "https://afdian.net/a/frostime"
+      ""
     ]
   },
   "keywords": [
-    "plugin", "sample", "插件样例"
+    "drawio",
+    "excalidraw",
+    "创建文件"
   ]
 }

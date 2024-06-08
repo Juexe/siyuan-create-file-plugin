@@ -39,6 +39,7 @@ export const inputDialog = (args: {
         }
         dialog.destroy();
     });
+    target.focus();
 };
 
 export const inputDialogSync = async (args: {
