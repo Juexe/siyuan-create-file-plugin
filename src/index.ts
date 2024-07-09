@@ -71,12 +71,25 @@ export default class PluginSample extends Plugin {
             name = name.substring(0, dot_pos)
         }
 
-        const salt = Math.random().toString(36).substring(8);
-        let filename = name + '-' + salt + '.' + ext;
+        const salt = Math.random().toString(36).substring(6);
+        let filename = name + '-' + this.getCurrentTimestamp() + '-' + salt + '.' + ext;
 
         const file = new File([template], 'file');
         putFile('/data/assets/' + filename, false, file)
 
         protyle.insert(`[${name}.${ext}](assets/${filename})`, true, true);
+    }
+
+    private getCurrentTimestamp() {
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // getMonth() 返回0-11，需要加1
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        return `${year}${month}${day}${hours}${minutes}${seconds}`;
     }
 }
